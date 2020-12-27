@@ -2,7 +2,7 @@ from pywinauto.application import Application
 import pywinauto
 import sys ,os
 class send_auto():
-    def __init__(self,path):
+    def __init__(self,path=__file__):
         # self.path      = path
         path = os.path.abspath(path)
         self.file_name = os.path.basename(path)
@@ -33,7 +33,7 @@ class send_auto():
         file_exp = self.app[self.file_exp_n]
         file_exp.type_keys('^l '+self.dir_path+'{ENTER}')
         file_exp.Edi1.type_keys(self.file_name+'{ENTER}')
-
+        return 0
 
 
 if __name__ == "__main__" :
