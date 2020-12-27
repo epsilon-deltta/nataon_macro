@@ -4,11 +4,12 @@ import sys ,os
 class send_auto():
     def __init__(self,path):
         # self.path      = path
+        path = os.path.abspath(path)
         self.file_name = os.path.basename(path)
         self.dir_path  = os.path.dirname (path)
 
         self.pid       =  self.get_nate_pid()
-        self.name      =  "이미향"
+        self.name      =  "성다빈"
         self.chat_name =  self.name + "님 메시지"
         self.chat_name = "내게 쓰기" # for developing
         self.msg_area  =  "RICHEDIT50W2"
